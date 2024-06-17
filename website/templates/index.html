@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+    <title>Yousuf DevOps Portfolio</title>
+</head>
+
+<header>
+    <!--Navbar-->
+    <div class="navbar fade-in">
+       <nav>
+           
+        <ul class="nav__links">
+            <li><a href="#projects" class="nav__text" >Projects</a></li>
+            <li><a href="#contact" class="nav__text">Contact</a></li>
+           
+        </ul>
+    </nav>
+    </div>
+    <!--Navbar-->
+
+    <!--Main-Text-->
+    <div class="main__text fade-in">
+
+        <!-- <img src="./prism.svg" class="logo"alt="" width="150px" height="150px"> -->
+        <h1 class="title">Hi, i'm Yousuf!</h1>
+        <p>I'm a DevOps Engineer from London. Check out some of my projects down below. Currently looking for a new position.
+        </p>
+        <a href="https://docs.google.com/document/d/1jcQPm57GTx3Avl1UXwTzmoQNedV_XXzLfGJd_D50gfY/edit?usp=sharing" class="btn fill" target="blank">Resume</a>
+        <div class="logo">
+        <img src="{{ url_for('static', filename='images/spaceship.gif') }}" alt="" width="150px" height="150px">
+        <div class='icon__scroll'>
+            
+            
+        </div>
+        </div>
+    </div>
+
+    <a id="button"></a>
+
+     <!--Main-Text-->
+
+     <!--Skils-->
+</header>
+<body>
+    <div class="skills">
+        <div class="container fade-in">
+            <h1 class="skills__title">WHAT I USE</h1>
+            <h4>I have the experience with the following tools:</h4>
+            <div class="icons">
+                <a>
+                <h6>AWS</h6>
+                <img src="{{ url_for('static', filename='images/AWS.png') }}" width="64px" height="64px" alt="local image">
+                </a>
+
+                <a>
+                <h6>Terraform</h6>
+                <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic-00.iconduck.com%2Fassets.00%2Ffile-type-terraform-icon-455x512-csyun60o.png&f=1&nofb=1&ipt=7ba442af84e6b43afee7ce8b5fb86a890f117168d1141ad1014d9172098200b7&ipo=images" width="64px" height="64px" alt="">
+                </a>
+
+                <a>
+                <h6>Ansible</h6>
+                <img src="https://creazilla-store.fra1.digitaloceanspaces.com/icons/3269501/ansible-icon-md.png" width="40px" height="40px" alt="">
+                </a>
+
+                <a>
+                <h6>Python</h6>
+                <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn3.iconfinder.com%2Fdata%2Ficons%2Flogos-and-brands-adobe%2F512%2F267_Python-1024.png&f=1&nofb=1&ipt=20454974223c4b7ffee8c124859ea5491545684bd09aa80a40da8463e79b3e2b&ipo=images" width="64px" height="64px" alt="">
+                </a>
+
+                <a>
+                <h6>Docker</h6>
+                <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Flogos-world.net%2Fwp-content%2Fuploads%2F2021%2F02%2FDocker-Emblem.png&f=1&nofb=1&ipt=28864cce5fcbecf9ff828c5db04dd5980e9ed41dbe657dd4465a6e3d0d8dd6a3&ipo=images" width="64px" height="64px" alt="">
+                </a>
+
+                <a>
+                <h6>Kubernetes</h6>
+                <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn2.iconfinder.com%2Fdata%2Ficons%2Fmixd%2F512%2F20_kubernetes-1024.png&f=1&nofb=1&ipt=0cf586cfc28310e096a6bac8cc28f2c685495ad8fde990ea2f1ef45fd88d7a4b&ipo=images" width="64px" height="64px" alt="">
+                </a>
+                
+                <a>
+                <h6>GitHub Actions</h6>
+                <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fgithub.gallerycdn.vsassets.io%2Fextensions%2Fgithub%2Fvscode-github-actions%2F0.26.2%2F1694016984133%2FMicrosoft.VisualStudio.Services.Icons.Default&f=1&nofb=1&ipt=a11b207fe715449466496cef24ed8b5d988cbf0350aeb1f3fa1ca0da8abbb01a&ipo=images" width="64px" height="64px" alt="">
+                </a>
+
+                <a>
+                <h6>Ubuntu/CentOS Admin</h6>
+                <img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2F1000logos.net%2Fwp-content%2Fuploads%2F2017%2F03%2FLINUX-LOGO.png&f=1&nofb=1&ipt=8a9712a8ff01c46c1fd9d83a2fc11187467add9265bf5d8ae496cfaa9ec597e2&ipo=images" width="64px" height="64px" alt="">
+                </a>
+
+            </div>
+            <div  id="projects"class="projects fade-in">
+            
+            <h1 class="project__title">HERE ARE MY PROJECTS</h1>
+            <h4>Here are the projects that I have created so far (including this webpage):</h4>
+    </div>
+    
+    
+ <!--Projects-->
+<div class="cards fade-in">
+    <div class="card bg-1">
+        <div class="card__info">
+        <h3>DevOps Portfolio website</h3>
+        <a href="https://y-ibrahim.github.io/VFX-landing-page/" target="blank">Demo</a>
+        <a href="https://github.com/Y-Ibrahim/VFX-landing-page" target="blank">Code</a>
+        </div>
+    </div>
+
+    <div class="card bg-2">
+        <div class="card__info">
+            <h3>Pico-8 Update Binary</h3>
+        <a href="https://y-ibrahim.github.io/E-commerce-shopping-cart/" target="blank">Demo</a>
+        <a href="https://github.com/Y-Ibrahim/E-commerce-shopping-cart" target="blank">Code</a>
+        <div class="color__overlay"></div>
+        </div>
+    </div>
+
+    
+    
+</div>
+
+<div class="contact__title">
+    <h1>Contact</h1>
+    <h2>If you liked some of my projects so far, feel free to contact me.</h2>
+</div>
+<!-- 
+<div class="contact fade-in">
+    
+ <div class="contact__form" id="contact">
+    <form id="contact-form" method="POST" action="https://formspree.io/xwkbldbj">
+        <input type="text" name="name" class="form__control name" placeholder="Name" required><br>
+
+        
+        <div class="status">
+
+        </div>
+
+        <input type="email"  name="_replyto" class="form__control email" placeholder="Your Email" required><br>
+
+
+        <input type="text" class=" form__control subject" name="subject"placeholder="Subject">
+
+        <div class="msg">
+            
+        </div>
+        <textarea name="message" class="form__control message" placeholder="Message" cols="30" rows="10" required></textarea><br>
+
+        <input type="submit" class="form__control submit" value="Send Message"> 
+        <button type="submit" class="form__control">Send Message</button>
+
+    </form>
+
+    
+   
+</div>
+</div>  -->
+
+
+
+
+
+
+<footer>
+    @Yousuf Ibrahim
+</footer>
+
+
+
+  
+    <script src="{{url_for('static',filename='index.js')}}"></script>
+</body> -->
+</html>
