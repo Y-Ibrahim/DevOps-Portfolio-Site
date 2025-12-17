@@ -31,7 +31,7 @@
 
         <!-- <img src="./prism.svg" class="logo"alt="" width="150px" height="150px"> -->
         <h1 class="title">Hi, i'm Yousuf!</h1>
-        <p>I'm a DevOps Engineer from London. Check out some of my projects down below. Currently looking for a new position.
+        <p>DevOps engineer focused on building resilient infrastructure, smooth deployments, and systems that scale with confidence.
         </p>
         <a href="https://docs.google.com/document/d/e/2PACX-1vQ_4vZWFFQ0bB51MU8oYwOmWGBRFhj9ZAtxk38U0e8px-gnDYK-LXAmoEXkx_xUwA/pub" class="btn fill" target="blank">Resume</a>
         <div class="logo">
@@ -57,12 +57,12 @@
             <div class="icons">
                 <a>
                 <h6>AWS</h6>
-                <img src="{{ url_for('static', filename='images/AWS.png') }}" width="64px" height="64px" alt="local image">
+                <img src="{{ url_for('static', filename='images/AWS.png') }}" width="50px" height="50px" alt="local image">
                 </a>
 
                 <a>
                 <h6>Terraform</h6>
-                <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic-00.iconduck.com%2Fassets.00%2Ffile-type-terraform-icon-455x512-csyun60o.png&f=1&nofb=1&ipt=7ba442af84e6b43afee7ce8b5fb86a890f117168d1141ad1014d9172098200b7&ipo=images" width="64px" height="64px" alt="">
+                <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.turbogeek.co.uk%2Fwp-content%2Fuploads%2F2023%2F02%2FTerraform-1329545833434920628.png&f=1&nofb=1&ipt=b3247837605982a2c478327bad32c7d16120d60388a10b21018bb72778617bbd" width="64px" height="64px" alt="">
                 </a>
 
                 <a>
@@ -77,7 +77,7 @@
 
                 <a>
                 <h6>Docker</h6>
-                <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Flogos-world.net%2Fwp-content%2Fuploads%2F2021%2F02%2FDocker-Emblem.png&f=1&nofb=1&ipt=28864cce5fcbecf9ff828c5db04dd5980e9ed41dbe657dd4465a6e3d0d8dd6a3&ipo=images" width="64px" height="64px" alt="">
+                <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Flogos-world.net%2Fwp-content%2Fuploads%2F2021%2F02%2FDocker-Emblem.png&f=1&nofb=1&ipt=28864cce5fcbecf9ff828c5db04dd5980e9ed41dbe657dd4465a6e3d0d8dd6a3&ipo=images" width="95px" height="60px" alt="">
                 </a>
 
                 <a>
@@ -99,68 +99,53 @@
             <div  id="projects"class="projects fade-in">
             
             <h1 class="project__title">HERE ARE MY PROJECTS</h1>
-            <h4>Here are the projects that I have created so far (including this webpage):</h4>
+            <h4>Here are the projects that I have created so far:</h4>
     </div>
     
     
  <!--Projects-->
 <div class="cards fade-in">
-    <div class="card bg-1">
-        <div class="card__info">
-        <h3>DevOps Portfolio website</h3>
-        <a href="https://y-ibrahim.github.io/VFX-landing-page/" target="blank">Demo</a>
-        <a href="https://github.com/Y-Ibrahim/VFX-landing-page" target="blank">Code</a>
-        </div>
-    </div>
-
     <div class="card bg-2">
         <div class="card__info">
-            <h3>Pico-8 Update Binary</h3>
-        <a href="https://y-ibrahim.github.io/E-commerce-shopping-cart/" target="blank">Demo</a>
+            <h3>Pico-8 Binary Updater</h3>
         <a href="https://github.com/Y-Ibrahim/E-commerce-shopping-cart" target="blank">Code</a>
         <div class="color__overlay"></div>
         </div>
     </div>
-
-    
-    
 </div>
 
 <div class="contact__title">
     <h1>Contact</h1>
     <h2>If you liked some of my projects so far, feel free to contact me.</h2>
 </div>
-<!-- 
+
 <div class="contact fade-in">
     
  <div class="contact__form" id="contact">
-    <form id="contact-form" method="POST" action="https://formspree.io/xwkbldbj">
+    <form id="contact-form" method="POST" action="{{ url_for('views.send_email') }}">
         <input type="text" name="name" class="form__control name" placeholder="Name" required><br>
 
-        
         <div class="status">
 
         </div>
 
-        <input type="email"  name="_replyto" class="form__control email" placeholder="Your Email" required><br>
+        <input type="email"  name="email" class="form__control email" placeholder="Your Email" required><br>
 
 
-        <input type="text" class=" form__control subject" name="subject"placeholder="Subject">
+        <input type="text" name="subject" class="form__control subject" name="subject" placeholder="Subject">
 
         <div class="msg">
             
         </div>
         <textarea name="message" class="form__control message" placeholder="Message" cols="30" rows="10" required></textarea><br>
 
-        <input type="submit" class="form__control submit" value="Send Message"> 
         <button type="submit" class="form__control">Send Message</button>
-
     </form>
 
     
    
 </div>
-</div>  -->
+</div> 
 
 
 
