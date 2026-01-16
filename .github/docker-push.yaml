@@ -1,0 +1,33 @@
+name: flask-ci
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build-test-run:
+    runs-on: self-hosted
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Build Docker image
+        run: docker build -t devops-portfolio:${{ github.sha }} .
+
+      - name: Run tests
+        run: |
+          docker run --rm devops-portfolio:${{ github.sha }} pytest
+
+      - name: Tag latest
+        run: |
+          docker tag devops-portfolio:${{ github.sha }} devops-portfolio:latest
+      
+      - name: Run container
+        run: |
+          docker stop portfolio || true
+          docker rm portfolio || true
+          docker run -d \
+            --name portfolio \
+            -p 5000:5000 \
+            devops-portfolio:latest
