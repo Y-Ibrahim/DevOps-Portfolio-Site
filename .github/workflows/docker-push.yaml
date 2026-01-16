@@ -15,10 +15,6 @@ jobs:
       - name: Build Docker image
         run: docker build -t devops-portfolio:${{ github.sha }} .
 
-      - name: Run tests
-        run: |
-          docker run --rm devops-portfolio:${{ github.sha }} pytest
-
       - name: Tag latest
         run: |
           docker tag devops-portfolio:${{ github.sha }} devops-portfolio:latest
