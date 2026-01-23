@@ -17,10 +17,8 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
 
-      - name: Setup Python      
-        uses: actions/setup-python@v6
-        with:
-          python-version: "3.14.2"
+      - name: Check Python
+        run: python3 --version
 
       - name: Install Dependencies
         run: |
