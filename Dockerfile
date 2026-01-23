@@ -5,6 +5,7 @@ COPY requirements.txt requirements.txt
 RUN apt-get update \
     && apt-get install -y default-libmysqlclient-dev  gcc\
     && pip install --no-cache-dir -r requirements.txt \
+    && pip install pytest \
     && pip install gunicorn
 COPY . /devops-portfolio
 
