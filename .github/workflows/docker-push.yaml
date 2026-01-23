@@ -17,18 +17,6 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
 
-      - name: Check Python
-        run: python3 --version
-
-      - name: Install Dependencies
-        run: |
-          python3 -m ensurepip --upgrade
-          python -m pip install --upgrade pip
-          pip install flake8 pytest
-          if [ -f requirements.txt ]; then 
-            pip install -r requirements.txt
-          fi
-
       - name: Lint with flake8
         run: |
           # stop the build if there are Python syntax errors or undefined names
@@ -43,6 +31,10 @@ jobs:
         run: |
           docker tag devops-portfolio:${{ github.sha }} devops-portfolio:latest
       
+      - name: Test inside Docker
+        run: |
+          docker run --rm devops-portfolio:latest pytest --maxfail=1 --disable-warnings -v
+                
       - name: Run container
         run: |
           docker stop portfolio || true
