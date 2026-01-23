@@ -29,7 +29,7 @@ jobs:
 
       - name: Test inside Docker
         run: |
-          docker run --rm devops-portfolio:latest pytest --maxfail=1 --disable-warnings -v
+          docker run --rm devops-portfolio:${{ github.sha }} pytest --maxfail=1 --disable-warnings -v
 
       - name: Run container
         run: |
