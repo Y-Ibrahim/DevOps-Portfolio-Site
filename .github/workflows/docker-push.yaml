@@ -40,4 +40,4 @@ jobs:
           push: true
           tags: |
             yibro99/devops-portfolio-website:latest
-            yourusername/jellyfin-k8s:${{ github.sha }}
+            yibro99/devops-portfolio-website:${{ github.sha }}
