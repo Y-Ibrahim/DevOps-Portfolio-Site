@@ -1,16 +1,12 @@
 *{
-    margin: 0 auto;
+    margin: 0;
     padding: 0;
     font-family: 'Montserrat', sans-serif;
     background-color: #202226;
-    
-
 }
 
-
-
 :root{
-    --prim-col:rgb(252, 109, 109);
+    --prim-col:#fc6d6d;
     --sec-col: #f0f0f0;
     --tert-col:#813838;
 }
@@ -30,14 +26,10 @@ a{
 }
 
 header {
-   
-   height: 100vh;
-   
+   min-height: 100vh;
   
 }
  
-
-
 nav{
     display: flex;
     justify-content: space-around;
@@ -66,7 +58,6 @@ nav{
 }
 /* NAV */
 
-
 /*-- Main text --*/
 
 .main{
@@ -74,7 +65,7 @@ nav{
 }
 
 .logo{
-  padding-bottom: 100px;
+  padding-top: 50px;
 }
 
 .laptop {
@@ -82,7 +73,7 @@ nav{
     margin-top: 30px;
 }
 .main__text{
-    padding-top: 200px;
+    padding-top: 30vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -150,18 +141,9 @@ nav{
 
 /*-- Main skills --*/
 .skills{
+    padding: 6rem 2rem;
     display: flex;
     justify-content: center;
-    align-items: center;
-    margin-top: 360px;
-    /* text-align: center; */
-    position: absolute;
-  width: 100%;
-  height: 100%;
-  display: flex;
-position: relative;
-
-
 }
 
 
@@ -176,19 +158,29 @@ position: relative;
 
 .icons{
    display: grid;
-   grid-template-columns: repeat(3, 1fr);
-   width: 40px;
-   align-items: center;
-   justify-content: center;
-   margin-top: 10px;
-   
-   
+   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+   gap: 3rem;
+   margin-top: 3rem;
 }
+
+.icons a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 0.6rem;
+
+    text-decoration: none;
+    cursor: default;
+}
+
 .icons img{
-   padding: 5px;
-  margin: 10px;
-   
+    padding: 5px;
+    margin: 10px;
+    color: var(--prim-col);
 }
+
 .icons h6{
     text-align: center;
     color: var(--sec-col);
@@ -196,17 +188,17 @@ position: relative;
 }
 
 .container{
-    margin-top: 300px;
-    
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
     
 }
 
 .container h2, h4{
-/* white-space: nowrap; */
-/* font-size: 0.5em; */
-text-align: center;
-color: var(--prim-col);
-font-weight: normal;
+    text-align: center;
+    color: var(--prim-col);
+    font-weight: normal;
 }
  
 
@@ -477,18 +469,9 @@ footer{
     
     }
     .skills{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 460px;
-        /* text-align: center; */
-        position: absolute;
-      width: 100%;
-      height: 100%;
-      display: flex;
-    position: relative;
-    
-    
+    padding: 6rem 2rem;
+    display: flex;
+    justify-content: center;
     }
   }
   
@@ -537,4 +520,3 @@ footer{
     opacity: 1;
     visibility: visible;
   }
-  
