@@ -10,6 +10,7 @@ on:
 
 permissions:
   contents: read
+  security-events: write
 
 jobs:
   build-test-run:
@@ -47,6 +48,8 @@ jobs:
         uses: aquasecurity/trivy-action@0.33.1
         with:
           image-ref: 'devops-portfolio:${{ github.sha }}'
+          scanners: 'config'
+          scan-ref: ''
           format: 'sarif'
           output: 'trivy-results.sarif'
           exit-code: '0'
