@@ -46,7 +46,7 @@ jobs:
       - name: Run Trivy vulnerability scanner
         uses: aquasecurity/trivy-action@0.33.1
         with:
-          image-ref: 'docker.io/yibro99/devops-portfolio-website:${{ github.sha }}'
+          image-ref: 'devops-portfolio:${{ github.sha }}'
           format: 'sarif'
           output: 'trivy-results.sarif'
           exit-code: '0'
